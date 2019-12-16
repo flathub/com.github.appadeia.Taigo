@@ -30,8 +30,8 @@
                 {
                     "type": "git",
                     "url": "https://github.com/Appadeia/taigo.git",
-                    "tag": "0.2",
-                    "commit": "5c683d1adb5e31157eceb4eb1c3d79c7d5d24f90"
+                    "tag": "0.3",
+                    "commit": "b66195a9bf14f00d643075d0a48404f559c35310"
                 }
             ]
         }
