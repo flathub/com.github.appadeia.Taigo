@@ -1,7 +1,7 @@
 {
     "app-id": "com.github.appadeia.Taigo",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "40",
+    "runtime-version": "45",
     "sdk": "org.gnome.Sdk",
     "command": "taigo",
     "finish-args": [
@@ -24,6 +24,7 @@
         "*.a"
     ],
     "modules": [
+        "shared-modules/clutter/clutter.json",
         {
             "name": "taigo",
             "buildsystem": "meson",
