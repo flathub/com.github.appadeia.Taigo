@@ -1,0 +1,57 @@
+From 8de61817fc6a2888f89f6f8a57d91a6a3c7a6766 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Wed, 30 Oct 2024 23:20:14 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+Fixes: #3
+---
+ data/com.github.appadeia.Taigo.appdata.xml.in |  9 ++++++---
+ data/com.github.appadeia.Taigo.desktop.in     |  3 ++-
+ 2 files changed, 8 insertions(+), 4 deletions(-)
+
+diff --git a/data/com.github.appadeia.Taigo.appdata.xml.in b/data/com.github.appadeia.Taigo.appdata.xml.in
+index f30e61d..b23d1a3 100644
+--- a/data/com.github.appadeia.Taigo.appdata.xml.in
++++ b/data/com.github.appadeia.Taigo.appdata.xml.in
+@@ -1,12 +1,15 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
++<component type="desktop-application">
+ 	<icon type="remote" width="128" height="128">https://raw.githubusercontent.com/Appadeia/taigo/master/data/com.github.appadeia.Taigo.svg</icon>
+ 	<name>Taigo</name>
+ 	<id>com.github.appadeia.Taigo.desktop</id>
+ 	<metadata_license>CC0-1.0</metadata_license>
+ 	<project_license>GPL-3.0-or-later</project_license>
+ 	<summary>Taigo is a virtual pet for your desktop</summary>
+-	<url type="homepage">https://github.com/appadeia/taigo</url>
++	<url type="homepage">https://github.com/pontaoski/taigo</url>
++	<url type="vcs-browser">https://github.com/pontaoski/taigo</url>
++	<launchable type="desktop-id">com.github.appadeia.Taigo.desktop</launchable>
++	<developer_name>Janet Blackquill</developer_name>
+ 	<description>
+ 		<p>
+ 			Taigo is a virtual pet for your desktop that you need to take care of.
+@@ -53,7 +56,7 @@
+ 		</release>
+ 	</releases>
+ 	<screenshots>
+-		<screenshot>
++		<screenshot type="default">
+ 			<caption>Home view of Taigo</caption>
+ 			<image type="source">https://raw.githubusercontent.com/Appadeia/taigo/master/data/screenshots/home.png</image>
+ 		</screenshot>
+diff --git a/data/com.github.appadeia.Taigo.desktop.in b/data/com.github.appadeia.Taigo.desktop.in
+index 189c679..f73e6b5 100644
+--- a/data/com.github.appadeia.Taigo.desktop.in
++++ b/data/com.github.appadeia.Taigo.desktop.in
+@@ -4,5 +4,6 @@ Exec=taigo
+ Icon=com.github.appadeia.Taigo
+ Terminal=false
+ Type=Application
+-Categories=GTK;
++Categories=GTK;Game;
++Keywords=Virtual Pet;Game;Digital Pet;
+ StartupNotify=true
+--
+libgit2 1.7.2
+
