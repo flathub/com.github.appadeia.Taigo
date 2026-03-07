@@ -1,7 +1,7 @@
 {
     "app-id": "com.github.appadeia.Taigo",
     "runtime": "org.gnome.Platform",
-    "runtime-version": "46",
+    "runtime-version": "48",
     "sdk": "org.gnome.Sdk",
     "command": "taigo",
     "finish-args": [
@@ -13,13 +13,9 @@
     ],
     "cleanup": [
         "/include",
+        "/lib/girepository-1.0",
         "/lib/pkgconfig",
-        "/man",
-        "/share/doc",
-        "/share/gtk-doc",
-        "/share/man",
-        "/share/pkgconfig",
-        "/share/vala",
+        "/share/gir-1.0",
         "*.la",
         "*.a"
     ],
@@ -28,6 +24,9 @@
         {
             "name": "taigo",
             "buildsystem": "meson",
+            "build-options":{
+                "cflags": "-Wno-implicit-function-declaration"
+            },
             "sources": [
                 {
                     "type": "git",
